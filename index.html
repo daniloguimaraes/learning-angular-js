@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script src="bower_components/angularjs/angular.js"></script>
+    <script src="app/js/app-config.js"></script>
+
+    <link rel="stylesheet" href="bower_components/angularjs/angular-csp.css"/>
+
+    <style>
+        .blue {
+            background-color: blue;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div ng-app="learningAngularJs">
+        <div ng-controller="HelloWorldController">
+            <input type="text" ng-model="nome" id/>
+
+            <div ng-style="myStyle">xtxtxt</div>
+
+            <div ng-class="myClass">text</div>
+        </div>
+
+    </div>
+</body>
+
+
+</html>
