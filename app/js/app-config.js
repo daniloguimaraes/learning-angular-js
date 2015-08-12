@@ -27,5 +27,6 @@ function HelloWorldController($scope) {
             $scope.myClass = 'blue';
         }
     });
-
 }
+
+

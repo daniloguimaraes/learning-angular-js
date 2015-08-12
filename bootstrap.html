@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css"/>
+
+
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css"></link>
+
+    <link rel="stylesheet" href="app/css/responsive.css"/>
+
+
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angularjs/angular.js"></script>
+
+    <script src="app/js/app-config.js"></script>
+    <script src="app/js/BootstrapController.js"></script>
+
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+
+    <title>Vai, bootstrap!</title>
+</head>
+<body ng-app="learningAngularJs">
+
+<div class="container" ng-controller="BootstrapController">
+    <form novalidate ng-submit="salvar()">
+        <div class="row">
+            <!-- Nome -->
+            <div class="form-group col-sm-3">
+                <label for="inputNome">Nome</label>
+                <input type="text" class="form-control" id="inputNome"
+                       ng-model="pessoa.nome">
+            </div>
+
+            <!-- Sobrenome -->
+            <div class="form-group col-sm-3">
+                <label for="inputSobrenome">Sobrenome</label>
+                <input type="text" class="form-control" id="inputSobrenome"
+                       ng-model="pessoa.sobrenome">
+            </div>
+
+            <!-- Email -->
+            <div class="form-group col-sm-3">
+                <label for="inputNascimento">Nascimento</label>
+                <input type="date" class="form-control" id="inputNascimento"
+                        ng-model="pessoa.nascimento"/>
+            </div>
+
+            <!-- Sexo -->
+            <div class="form-group col-sm-3">
+                <label for="inputSexo">Sexo</label>
+                <select name="sexo" class="form-control" id="inputSexo" ng-model="pessoa.sexo">
+                    <option value="M">Masculino</option>
+                    <option value="F">Feminino</option>
+                </select>
+            </div>
+        </div>
+
+        {{pessoa}}
+
+        <nav class="navbar navbar-default">
+            <button type="submit" class="btn btn-primary navbar-btn">
+                <i class="fa fa-save"></i>
+                Salvar
+            </button>
+
+            <button type="submit" class="btn btn-warning navbar-btn" ng-click="limpar()"  >
+                <i class="fa fa-eraser"></i>
+                Limpar
+            </button>
+
+            <button type="submit" class="btn btn-danger navbar-btn" ng-click="excluir()">
+                <i class="fa fa-trash-o"></i>
+                Excluir
+            </button>
+        </nav>
+
+        {{pessoas}}
+
+        <table class="table table-hover table-striped">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nome</th>
+                    <th>Nome</th>
+                    <th>Nascimento</th>
+                    <th>Sexo</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr ng-repeat="pessoa in pessoas track by $index" ng-click="selecionar(pessoa)">
+                    <td ng-bind="$index"></td>
+                    <td ng-bind="pessoa.nome"></td>
+                    <td ng-bind="pessoa.sobrenome"></td>
+                    <td ng-bind="pessoa.nascimento | date"></td>
+                    <td ng-bind="pessoa.sexo"></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+
+</div>
+
+</body>
+</html>
