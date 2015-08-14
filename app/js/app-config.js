@@ -2,7 +2,7 @@
  * Created by Danilo on 10/08/2015.
  */
 
-angular.module('learningAngularJs', ['ui.grid', 'ui.grid.resizeColumns', 'ui.grid.selection'])
+angular.module('learningAngularJs', ['ui.grid', 'ui.grid.resizeColumns', 'ui.grid.selection', 'ngMaterial'])
     .controller('HelloWorldController', HelloWorldController
 );
 
