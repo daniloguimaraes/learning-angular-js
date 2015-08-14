@@ -13,8 +13,12 @@
     "tests"
   ],
   "dependencies": {
-    "angularjs": "~1.4.3",
+    "angularjs": "~1.4.4",
     "font-awesome": "~4.4.0",
-    "bootstrap": "~3.3.5"
+    "bootstrap": "~3.3.5",
+    "angular-ui-grid": "~3.0.4",
+    "angular-ui-growl": "~0.0.1",
+    "angular-messages": "~1.4.4",
+    "jquery": "~2.1.4"
   }
 }
