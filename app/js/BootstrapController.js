@@ -3,8 +3,7 @@
  */
 angular.module('learningAngularJs').controller('BootstrapController', BootstrapController);
 
-BootstrapController.$inject = ['$scope'];
-
+/*@ngInject*/
 function BootstrapController($scope) {
     $scope.pessoa = {
         "nome": "danilo", "sobrenome": "lemes", "sexo": "M", "cor" : "green"

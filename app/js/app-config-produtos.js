@@ -2,8 +2,14 @@
  * Created by Danilo on 17/08/2015.
  */
 
-angular.module('produtosApp', ['ui.router', 'oc.lazyLoad'])
+angular.module('produtosApp', ['ui.router', 'oc.lazyLoad', 'oobj-directives'])
     .config(routeConfig)
+    .directive('jbHelloWorld', function() {
+        return {
+            restrict : 'E',
+            templateUrl : 'app/directives/hello-world/hello-world.html'
+        }
+    })
 ;
 
 routeConfig.$inject = ['$stateProvider', '$urlRouterProvider'];

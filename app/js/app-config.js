@@ -2,7 +2,7 @@
  * Created by Danilo on 10/08/2015.
  */
 
-angular.module('learningAngularJs', ['ui.grid', 'ui.grid.resizeColumns', 'ui.grid.selection', 'ngMaterial', 'ui.router'])
+angular.module('learningAngularJs', ['ui.grid', 'ui.grid.resizeColumns', 'ui.grid.selection', 'ngMaterial', 'ui.router', 'oobj-directives'])
     .controller('HelloWorldController', HelloWorldController)
     .config(routeConfig)
 ;
