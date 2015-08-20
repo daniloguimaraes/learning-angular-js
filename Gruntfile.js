@@ -16,6 +16,10 @@ module.exports = function(grunt) {
             watchLessModification: {
                 files : ['app/**/*.less'],
                 tasks: ['less']
+            },
+            watchJsHint: {
+                files: ['app/**/*.js'],
+                tasks: ['jshint']
             }
         },
         // injeta as dependencias -->
@@ -101,6 +105,14 @@ module.exports = function(grunt) {
                         src: ['build/**/*.html']
                     }
                 ]
+            }
+        },
+        jshint: {
+            files: ['Gruntfile.js', 'src/**/*.js', 'test/**/*.js'],
+            options: {
+                globals: {
+                    jQuery: true
+                }
             }
         }
   });

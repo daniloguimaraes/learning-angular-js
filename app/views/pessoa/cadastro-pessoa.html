@@ -6,10 +6,14 @@
             acao-limpar="limpar()">
 
         <div class="row">
-            <input-text label="Nome" colspan="5"></input-text>
+            <input-text label="Nome" ng-model="pessoa.nome" colspan="3"></input-text>
 
-            <input-text label="Sobrenome" colspan="5"></input-text>
+            <input-text label="Sobrenome" ng-model="pessoa.sobrenome" colspan="3"></input-text>
+
+            <input-select label="Sexo" provider="generos" ng-model="pessoa.sexo" colspan="2"></input-select>
 
         </div>
+
+        {{pessoa}}
     </oobj-crud>
 </div>

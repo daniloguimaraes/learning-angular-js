@@ -8,6 +8,17 @@ angular.module('produtosApp')
 CadastroPessoaController.$inject = ['$scope'];
 
 function CadastroPessoaController($scope) {
+    $scope.generos = [
+        {
+            value: 'M',
+            label: 'Masculino'
+        },
+        {
+            value: 'F',
+            label: 'Feminino'
+        }
+    ];
+
     $scope.salvar = function() {
         alert("salvou");
     };
