@@ -1,7 +1,15 @@
 <div ng-controller="CadastroPessoaController">
 
-    <div style="width: 100%; height: 150px; background-color: pink">
+    <oobj-crud titulo="Cadastro de pessoa"
+            acao-salvar="salvar()"
+            acao-excluir="excluir()"
+            acao-limpar="limpar()">
 
-    </div>
+        <div class="row">
+            <input-text label="Nome" colspan="5"></input-text>
 
+            <input-text label="Sobrenome" colspan="5"></input-text>
+
+        </div>
+    </oobj-crud>
 </div>

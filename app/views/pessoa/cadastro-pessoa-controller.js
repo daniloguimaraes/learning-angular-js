@@ -1,9 +1,6 @@
 /**
  * Created by Danilo on 17/08/2015.
  */
-/**
- * Created by Danilo on 17/08/2015.
- */
 angular.module('produtosApp')
     .controller('CadastroPessoaController', CadastroPessoaController)
 ;
@@ -11,5 +8,15 @@ angular.module('produtosApp')
 CadastroPessoaController.$inject = ['$scope'];
 
 function CadastroPessoaController($scope) {
-    console.log("cadastro de pessoa controller");
+    $scope.salvar = function() {
+        alert("salvou");
+    };
+
+    $scope.excluir = function() {
+
+    };
+
+    $scope.limpar = function() {
+
+    };
 };

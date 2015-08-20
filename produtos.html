@@ -35,6 +35,7 @@
     <script src="app/directives/oobj-directives.js"></script>
     <script src="app/directives/hello-world/hello-world.js"></script>
     <script src="app/directives/input-text/input-text.js"></script>
+    <script src="app/directives/crud/crud.js"></script>
 
     <!-- App -->
     <script src="app/js/app-config-produtos.js"></script>
@@ -45,14 +46,12 @@
 </head>
 <body ng-app="produtosApp">
 
-    <div class="container">
+    <div class="container" md-theme="green">
         <div>
             <md-toolbar>
                 <div class="md-toolbar-tools">
                     <ul class="nav nav-pills">
                         <li><a ui-sref="home">Home</a></li>
-                        <li><a ui-sref="produto({ id : 10 })">Cadastro de Produto</a></li>
-                        <li><a ui-sref="produto.pesquisa">Pesquisa de Produto</a></li>
 
                         <li><a ui-sref="pessoa.cadastro">Cadastro de Pessoa</a></li>
                         <li><a ui-sref="pessoa.pesquisa">Pesquisa de Pessoa</a></li>
@@ -62,18 +61,6 @@
         </div>
     </div>
 
-    <div>
-       <jb-hello-world></jb-hello-world>
-
-    </div>
-
-    <div>
-        <input-text label="Digite o nome do produto" ng-model="pessoa.nome" colspan="6"></input-text>
-
-        <input-text label="Digite o nome do produto" ng-model="pessoa.nome" colspan="6"></input-text>
-    </div>
-
-    {{pessoa}}
 
     <div ui-view></div>
 

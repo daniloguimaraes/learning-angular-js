@@ -4,6 +4,7 @@
 
 angular.module('produtosApp', ['ui.router', 'oc.lazyLoad', 'oobj-directives'])
     .config(routeConfig)
+    .config(colorConfig)
     .directive('jbHelloWorld', function() {
         return {
             restrict : 'E',
@@ -12,7 +13,7 @@ angular.module('produtosApp', ['ui.router', 'oc.lazyLoad', 'oobj-directives'])
     })
 ;
 
-routeConfig.$inject = ['$stateProvider', '$urlRouterProvider'];
+routeConfig.$inject = ['$stateProvider', '$urlRouterProvider', '$mdThemingProvider'];
 
 function routeConfig($stateProvider, $urlRouterProvider) {
     var home = {
@@ -95,4 +96,10 @@ function routeConfig($stateProvider, $urlRouterProvider) {
         .state('pessoa.pesquisa', pesquisaPessoa);
 
     $urlRouterProvider.otherwise("/home");
+}
+
+function colorConfig($mdThemingProvider) {
+    $mdThemingProvider.theme('green')
+        .primaryPalette('green');
+
 }

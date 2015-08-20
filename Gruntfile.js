@@ -9,9 +9,13 @@ module.exports = function(grunt) {
             monitorWebFiles: {
                 files: ['app/**/*.js', '**/*.html', 'app/**/*.css']
             },
-            runWiredep: {
+            watchBowerModification: {
                 files : ['bower.json'],
                 tasks: ['wiredep']
+            },
+            watchLessModification: {
+                files : ['app/**/*.less'],
+                tasks: ['less']
             }
         },
         // injeta as dependencias -->
@@ -67,6 +71,13 @@ module.exports = function(grunt) {
                     }
                 ]
             }
+        },
+        less: {
+          app: {
+              files : {
+                  "app/css/app.css" : "app/less/app.less"
+                }
+          }
         },
         cssmin: {
             build : {
